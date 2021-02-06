@@ -1,7 +1,7 @@
 const srvHTTP = require('./src/http-server');
 const srvWS = require('./src/ws-server');
 const utils = require('./src/utils');
-const PORT = 9000;
+const PORT = 8080;
 
 srvWS.init({
 
