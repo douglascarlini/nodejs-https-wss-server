@@ -10,4 +10,4 @@ RUN npm install
 COPY app/* .
 
 EXPOSE 8080
-CMD [ "node", "server.js" ]
+CMD [ "node", "index.js" ]
