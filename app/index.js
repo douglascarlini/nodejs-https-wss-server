@@ -18,9 +18,8 @@ srvWS.init({
         onrequest: p => new Promise(async (res, rej) => {
 
             utils.log.debug(`http from ${p.ip}`);
-            var data = JSON.parse(p.body);
             srvWS.bounce = r => res(r);
-            srvWS.broadcast(data);
+            srvWS.broadcast(p.body);
 
         })
 
