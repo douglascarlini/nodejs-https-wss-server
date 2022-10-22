@@ -12,8 +12,8 @@ module.exports = {
         if (fs.existsSync('certificate.pem')) {
 
             var certificate = fs.readFileSync('certificate.pem').toString();
-            var privateKey = fs.readFileSync('privatekey.pem').toString();
-            var options = { key: privateKey, cert: certificate };
+            var private_key = fs.readFileSync('private_key.pem').toString();
+            var options = { key: private_key, cert: certificate };
             var mode = `HTTP/WS: Server created [SSL-secure]`;
             this.server = https.createServer(options);
 

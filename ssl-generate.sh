@@ -1,8 +1,8 @@
 #!/bin/bash
 
-openssl genrsa -out privatekey.pem 1024
-openssl req -new -key privatekey.pem -out certrequest.csr
-openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certificate.pem
+openssl genrsa -out private_key.pem 1024
+openssl req -new -key private_key.pem -out ssl_request.csr
+openssl x509 -req -in ssl_request.csr -signkey private_key.pem -out certificate.pem
 
 mv certificate.pem app/
-mv privatekey.pem app/
+mv private_key.pem app/
