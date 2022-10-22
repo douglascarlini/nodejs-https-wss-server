@@ -25,5 +25,5 @@ A personal project of a simple WebSocket server with a built-in HTTP REST/API an
 - ##### Run on Docker
   ```bash
   chmod +x dockerize.sh
-  ./dockerize <port>
+  ./dockerize <port> <name>
   ```
