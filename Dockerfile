@@ -9,5 +9,5 @@ RUN npm install
 
 COPY app .
 
-EXPOSE 8080
+EXPOSE 80 443
 CMD [ "node", "index.js" ]
