@@ -3,11 +3,16 @@ A personal project of a simple WebSocket server with a built-in HTTP REST/API an
 
 > **WARNING!** It's a studies purpose project.
 
-### How To Use
+### About
+
+It's simple WebSocket application with HTTP API for WS communication.
+
+### Requirements
 
 > OpenSSL is required to generate SSL certified.
-
 > NodeJS or Docker is required to run application.
+
+### How To Use
 
 - ##### Generate SSL Certified
   ```bash
