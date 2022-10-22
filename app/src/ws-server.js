@@ -83,7 +83,7 @@ module.exports = {
 
             } catch (e) {
 
-                var error = `${e.message || e}`;
+                var error = `${e.message || e || 'broadcast error'}`;
                 utils.log.error({ broadcast: error });
                 rej({ error });
 
@@ -108,7 +108,7 @@ module.exports = {
 
         } catch (e) {
 
-            var error = `${e.message || e}`;
+            var error = `${e.message || e || 'send error'}`;
             utils.log.error({ send: error });
             return false;
 

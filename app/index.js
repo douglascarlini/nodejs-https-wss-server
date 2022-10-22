@@ -7,7 +7,7 @@ srvWS.init({
 
     onconnect(peer) {
 
-        utils.log.debug(`peer connected: ${peer.ip}`);
+        utils.log.debug(`ws peer connected: ${peer.ip}`);
 
     },
 
@@ -15,11 +15,14 @@ srvWS.init({
 
         port: PORT,
 
-        onrequest: p => new Promise(async (res, rej) => {
+        onrequest: (p) => new Promise(async (res, rej) => {
 
-            utils.log.debug(`http from ${p.ip}`);
-            srvWS.bounce = r => res(r);
+            var msg = `HTTP ${p.method} ${p.url} from ${p.ip}`;
+            var error = { error: 'no response from ws' };
+            setTimeout(() => res(error), 5000);
+            srvWS.bounce = (r) => res(r);
             srvWS.broadcast(p.body);
+            utils.log.debug(msg);
 
         })
 

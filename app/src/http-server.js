@@ -48,6 +48,7 @@ module.exports = {
                 var data = {
                     body,
                     url: req.url,
+                    method: req.method,
                     headers: req.headers,
                     ip: req.connection.remoteAddress.replace('::ffff:', ''),
                 };
